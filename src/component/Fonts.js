@@ -1,0 +1,46 @@
+const Fonts = {
+    NunitoBlack: "Nunito-Black",
+    NunitoBold: "Nunito-Bold",
+    NunitoExtraBold: "Nunito-ExtraBold",
+    NunitoMedium:"Nunito-Medium",
+    NunitoRegular:"Nunito-Regular",
+    NunitoSemiBold: "Nunito-SemiBold",
+    PoppinsBlack:"Poppins-Black",
+    PoppinsBold:"Poppins-Bold",
+    PoppinsExtraBold:"Poppins-ExtraBold",
+    PoppinsMedium:"Poppins-Medium",
+    PoppinsRegular:"Poppins-Regular",
+    PoppinsSemiBold:"Poppins-SemiBold",
+    RobotoBlack:"Roboto-Black",
+    RobotoBlackItalic:"Roboto-BlackItalic",
+    RobotoItalic:"Roboto-Italic",
+    RobotoLight:"Roboto-Light",
+    RobotoLightItalic:"Roboto-LightItalic",
+    RobotoMedium:"Roboto-Medium",
+    RobotoMediumItalic:"Roboto-MediumItalic",
+    RobotoRegular:"Roboto-Regular",
+    RobotoThin:"Roboto-Thin",
+    RobotoThinItalic:"Roboto-ThinItalic"
+
+}
+
+export const FontSize = {
+    fontSize8: 8,
+    fontSize10: 10,
+    fontSize11: 11,
+    fontSize12: 12,
+    fontSize13: 13,
+    fontSize14: 14,
+    fontSize16: 16,
+    fontSize17: 17,
+    fontSize18: 18,
+    fontSize20: 20,
+    fontSize22: 22,
+    fontSize24: 24,
+    fontSize26: 26,
+    fontSize28: 28,
+    fontSize30: 30,
+    fontSize35: 35,
+    fontSize40: 40,
+  };
+export default Fonts;
