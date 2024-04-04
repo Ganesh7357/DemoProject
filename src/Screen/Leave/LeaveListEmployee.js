@@ -5,29 +5,29 @@ import {
     widthPercentageToDP as wp,
     heightPercentageToDP as hp,
 } from 'react-native-responsive-screen';
-// import AppHeader from '../../component/AppHeader';
-import Colors from '../../component/Colors';
-import ImagePath from '../../Lip/ImagePath';
+import AppHeader from '../../component/AppHeader';
+import Colors from '../../lip/Colors';
+import ImagePath from '../../lip/ImagePath';
 import Caption from '../../component/Caption';
-import Fonts from '../../component/Fonts';
-import { FontSize } from '../../component/Fonts';
+import Fonts from '../../lip/Fonts';
+import { FontSize } from '../../lip/Fonts';
 
-// import AppContext from '../../lip/AppContext';
-// import moment from 'moment';
-import Helper from '../../Lip/Helper';
+import AppContext from '../../lip/AppContext';
+import moment from 'moment';
+import Helper from '../../lip/Helper';
 import NetInfo from '@react-native-community/netinfo';
-// import AlertMsg from '../../lip/AlertMsg';
-// import ApiUrl from '../../lip/ApiUrl';
-import Config from '../../Config';
+import AlertMsg from '../../lip/AlertMsg';
+import ApiUrl from '../../lip/ApiUrl';
+import Config from '../../lip/Config';
 
 const LeaveListEmployee = ({ navigation }) => {
-    //   const //loaderContext = useContext(AppContext);
+      const loaderContext = useContext(AppContext);
 
     const [leaveList, setleaveList] = useState([]);
 
 
     useEffect(() => {
-        console.log('leaveList',leaveList)
+        // console.log('leaveList',leaveList)
         const unsubscribe = navigation.addListener('focus', () => {
             Helper.getData('userdata').then(res => {
                 getLeaveHistory(res._id);
@@ -55,7 +55,7 @@ const LeaveListEmployee = ({ navigation }) => {
                         .then(response => {
                             if (response.success == true) {
                                 setleaveList(response.data.leaveRequests);
-                                console.log('response.data.leaveRequests=====>',response.data.leaveRequests)
+                                // console.log('response.data.leaveRequests=====>',response.data.leaveRequests)
                                 //loaderContext.hideLoader();
                             } else {
                                 setleaveList([]);

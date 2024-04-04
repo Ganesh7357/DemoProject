@@ -6,7 +6,7 @@ import {
     heightPercentageToDP as hp,
 } from 'react-native-responsive-screen';
 import NetInfo from '@react-native-community/netinfo';
-import Helper from '../../Lip/Helper';
+import Helper from '../../lip/Helper';
 
 const LoginScreen = ({ navigation }) => {
     const [sheetHeight, setSheetHeight] = useState(55);
@@ -168,7 +168,6 @@ const LoginScreen = ({ navigation }) => {
 
     }
 
-
     return (
         <View style={styles.container}>
             {modalverfication == false && (
@@ -195,7 +194,7 @@ const LoginScreen = ({ navigation }) => {
             )}
             {modalverfication === true && (
                 <>
-                    {phoneNo === '8686868643' ? (
+                    {phoneNo === '7357715695' ? (
                         <>
                             <TextInput
                                 placeholder="Password"

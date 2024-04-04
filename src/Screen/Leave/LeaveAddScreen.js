@@ -12,16 +12,16 @@ import {
   heightPercentageToDP as hp,
 } from 'react-native-responsive-screen';
 // import AppHeader from '../../component/AppHeader';
-import Colors from '../../component/Colors';
-import ImagePath from '../../Lip/ImagePath';
+import Colors from '../../lip/Colors';
+import ImagePath from '../../lip/ImagePath';
 import Caption from '../../component/Caption';
-import Fonts from '../../component/Fonts';
-import {FontSize} from '../../component/Fonts';
+import Fonts from '../../lip/Fonts';
+import {FontSize} from '../../lip/Fonts';
 import RNPickerSelect from 'react-native-picker-select';
 // import AppContext from '../../lip/AppContext';
 import moment from 'moment';
 
-import Helper from '../../Lip/Helper';
+import Helper from '../../lip/Helper';
 import NetInfo from '@react-native-community/netinfo';
 // import AlertMsg from '../../lip/AlertMsg';
 // import ApiUrl from '../../lip/ApiUrl';

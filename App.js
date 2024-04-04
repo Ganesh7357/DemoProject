@@ -8,12 +8,12 @@ import {
   Alert,
   PermissionsAndroid,
 } from 'react-native';
-import LoginScreen from './src/Screen/LoginScreen/LoginScreen'
 import 'react-native-gesture-handler';
-LogBox.ignoreAllLogs(true);
-import { NavigationContainer } from '@react-navigation/native';
-import PunchinScreen from './src/Screen/BottomScreen/PunchinScreen';
+// import { NavigationContainer } from '@react-navigation/native';
+// import PunchinScreen from './src/Screen/BottomScreen/PunchinScreen';
 import Routes from './src/Navigation/Routes';
+LogBox.ignoreAllLogs(true);
+
 const App = () => {
   const [locationPermission, setLocationPermission] = useState(null);
 

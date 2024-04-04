@@ -2,7 +2,7 @@ import * as React from 'react';
 import {Alert, Platform} from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import Toast from 'react-native-simple-toast';
-import Config from '../Config';
+import Config from './Config';
 import DeviceInfo from 'react-native-device-info';
 
 export default class Helper extends React.Component {
@@ -15,7 +15,10 @@ export default class Helper extends React.Component {
   static driverSchoolID = '';
   static LeadID = ''
   static LeadDetails = ''
-  static LeadType = ""
+  static LeadType = " "
+  static ProjectIDD = '';
+  static ProjectDetails = '';
+  static EmployeeID = '';
 
   static showToast(msg) {
     Toast.show(msg, Toast.BOTTOM);
@@ -88,13 +91,13 @@ export default class Helper extends React.Component {
            
           },
         },
-        // {
-        //   text: Gallery,
-        //   onPress: () => {
-        //     if (cbGallery) cbGallery(true);
+        {
+          text: Gallery,
+          onPress: () => {
+            if (cbGallery) cbGallery(true);
            
-        //   },
-        // },
+          },
+        },
         {
           text: Cancel,
           onPress: () => {
@@ -112,7 +115,6 @@ export default class Helper extends React.Component {
       let tempval = JSON.stringify(val);
       await AsyncStorage.setItem(key, tempval);
     } catch (error) {
-      console.error(error, '----------SetAsyncStorage');
     }
   }
 
@@ -126,7 +128,6 @@ export default class Helper extends React.Component {
         return value;
       }
     } catch (error) {
-      console.error(error, '---------GetAsyncStorage');
     }
   }
 
@@ -141,20 +142,18 @@ export default class Helper extends React.Component {
 
   static async makeRequest({url, data, method}) {
     let finalUrl = Config.baseurl + url;
-    console.log(finalUrl, '________finalUrl');
-    console.log(data, 'data');
-    console.log(method, 'method');
+   
     let form;
     let methodnew;
     let token = await this.getData('token');
-    console.log(token, '++++++++++++tokentoken');
+    console.log(finalUrl, '++++++++++++finalUrl');
+    // console.log(data, '++++++++++++data');
+    // console.log(token, '++++++++++++tokentoken');
 
     let varheaders;
     if (method == 'POSTUPLOAD') {
       methodnew = 'POST';
       varheaders = {
-        // Accept: 'application/json',
-        // 'Content-Type': 'multipart/form-data',
         Authorization: token
       };
       form = data;
@@ -205,9 +204,6 @@ export default class Helper extends React.Component {
       }
     }
 
-    console.log('varheaders=', varheaders);
-    console.log('form', form);
-    console.log('methodnewmethodnew', methodnew);
     return fetch(finalUrl, {
       body: form,
       method: methodnew,
@@ -220,7 +216,7 @@ export default class Helper extends React.Component {
         return responseJson;
       })
       .catch((error, a) => {
-        console.log('errorerror', error);
+       console.log('API_ERROR', error);
       });
   }
 }

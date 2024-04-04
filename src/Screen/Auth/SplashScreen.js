@@ -4,8 +4,8 @@ import {
   widthPercentageToDP as wp,
   heightPercentageToDP as hp,
 } from 'react-native-responsive-screen';
-import ImagePath from '../../Lip/ImagePath';
-import Helper from '../../Lip/Helper';
+import ImagePath from '../../lip/ImagePath';
+import Helper from '../../lip/Helper';
 
 const SplashScreen = ({ navigation }) => {
   useEffect(() => {

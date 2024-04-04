@@ -10,13 +10,13 @@ import {
   DeviceEventEmitter,
   useColorScheme,
 } from 'react-native';
-import ImagePath from '../Lip/ImagePath';
+import ImagePath from '../lip/ImagePath';
 import navigationStrings from './navigationStrings';
 import {
   heightPercentageToDP as hp,
   widthPercentageToDP as wp,
 } from 'react-native-responsive-screen';
-import Helper from '../Lip/Helper';
+import Helper from '../lip/Helper';
 
 function SideDrawerTab(props) {
   const { onClick, label, img, menuSamIconCss, sameTextCSs, menuIconTextView } =
@@ -100,47 +100,70 @@ const CustomDrawerContent = ({ navigation }) => {
                 ]}>
                 Kumawatganesh718@gmail.com
               </Text>
-            </View>
-          </View>  */}
+            </View> 
+           </View>  */}
         </View>
         <View
           style={{
             marginHorizontal: wp(3),
-            // marginVertical: hp(2),
+            marginVertical: hp(2),
           }}>
           <SideDrawerTab
             onClick={() => {
               navigation.closeDrawer();
-              navigation.navigate(navigationStrings.PUNCHIN);
+              navigation.navigate('LEADS');
             }}
-            label={'Punchin'}
+            label={'Leads'}
             menuSamIconCss={styles.menuSamIconCss}
             sameTextCSs={styles.sameTextCSs}
             menuIconTextView={styles.menuIconTextView}
-            // img={ImagePath.Ic_punchinout}
+            img={ImagePath.Ic_leads}
           />
           <SideDrawerTab
             onClick={() => {
               navigation.closeDrawer();
-              navigation.navigate(navigationStrings.PROFILE);
+              navigation.navigate('PROJECT');
+            }}
+            label={'Project'}
+            menuSamIconCss={styles.menuSamIconCss}
+            sameTextCSs={styles.sameTextCSs}
+            menuIconTextView={styles.menuIconTextView}
+            img={ImagePath.Ic_project}
+          />
+          <SideDrawerTab
+            onClick={() => {
+              navigation.closeDrawer();
+              navigation.navigate('TEAM');
+            }}
+            label={'Team'}
+            menuSamIconCss={styles.menuSamIconCss}
+            sameTextCSs={styles.sameTextCSs}
+            menuIconTextView={styles.menuIconTextView}
+            img={ImagePath.Ic_teams}
+          />
+          <SideDrawerTab
+            onClick={() => {
+              navigation.closeDrawer();
+              navigation.navigate('PUNCHIN');
+            }}
+            label={'Punch'}
+            menuSamIconCss={styles.menuSamIconCss}
+            sameTextCSs={styles.sameTextCSs}
+            menuIconTextView={styles.menuIconTextView}
+            img={ImagePath.Ic_punchinout}
+          />
+          <SideDrawerTab
+            onClick={() => {
+              navigation.closeDrawer();
+              navigation.navigate('PROFILE');
             }}
             label={'Profile'}
             menuSamIconCss={styles.menuSamIconCss}
             sameTextCSs={styles.sameTextCSs}
             menuIconTextView={styles.menuIconTextView}
-            // img={ImagePath.Ic_user}
+            img={ImagePath.Ic_user}
           />
-          <SideDrawerTab
-            onClick={() => {
-              navigation.closeDrawer();
-              logoutApi();
-            }}
-            label={'Logout'}
-            menuSamIconCss={styles.menuSamIconCss}
-            sameTextCSs={styles.sameTextCSs}
-            menuIconTextView={styles.menuIconTextView}
-            // img={ImagePath.Ic_logout}
-          />
+         
           <SideDrawerTab
             onClick={() => {
               navigation.closeDrawer();
@@ -150,7 +173,7 @@ const CustomDrawerContent = ({ navigation }) => {
             menuSamIconCss={styles.menuSamIconCss}
             sameTextCSs={styles.sameTextCSs}
             menuIconTextView={styles.menuIconTextView}
-            // img={ImagePath.Ic_logout}
+            img={ImagePath.Ic_applyleave}
           />
           <SideDrawerTab
             onClick={() => {
@@ -161,18 +184,30 @@ const CustomDrawerContent = ({ navigation }) => {
             menuSamIconCss={styles.menuSamIconCss}
             sameTextCSs={styles.sameTextCSs}
             menuIconTextView={styles.menuIconTextView}
-            // img={ImagePath.Ic_logout}
+            img={ImagePath.Ic_attendance}
           />
+          
           <SideDrawerTab
             onClick={() => {
               navigation.closeDrawer();
-              navigation.navigate(navigationStrings.LOCATION_PERMISSION_SEREEN)
+              navigation.navigate(navigationStrings.ATTENDANCE_LIST)
             }}
-            label={'LOCATION PERMISSION'}
+            label={'Attendance List'}
             menuSamIconCss={styles.menuSamIconCss}
             sameTextCSs={styles.sameTextCSs}
             menuIconTextView={styles.menuIconTextView}
-            // img={ImagePath.Ic_logout}
+            img={ImagePath.Ic_attendance}
+          />
+           <SideDrawerTab
+            onClick={() => {
+              navigation.closeDrawer();
+              logoutApi();
+            }}
+            label={'Logout'}
+            menuSamIconCss={styles.menuSamIconCss}
+            sameTextCSs={styles.sameTextCSs}
+            menuIconTextView={styles.menuIconTextView}
+            img={ImagePath.Ic_logout}
           />
         </View>
       </ScrollView>

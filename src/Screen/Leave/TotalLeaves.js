@@ -16,11 +16,11 @@ import {
     widthPercentageToDP as wp,
     heightPercentageToDP as hp,
 } from 'react-native-responsive-screen';
-import Colors from '../../component/Colors';
-import ImagePath from '../../Lip/ImagePath';
+import Colors from '../../lip/Colors';
+import ImagePath from '../../lip/ImagePath';
 import Caption from '../../component/Caption';
-import Fonts from '../../component/Fonts';
-import { FontSize } from '../../component/Fonts';
+import Fonts from '../../lip/Fonts';
+import { FontSize } from '../../lip/Fonts';
 import NetInfo from '@react-native-community/netinfo';
 
 const TotalLeaves = () => {
