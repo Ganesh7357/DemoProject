@@ -1,4 +1,4 @@
-package com.projectone
+package com.siddhiananta
 
 import android.app.Application
 import com.facebook.react.PackageList

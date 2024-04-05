@@ -16,10 +16,10 @@ import {
     widthPercentageToDP as wp,
     heightPercentageToDP as hp,
 } from 'react-native-responsive-screen';
-import Colors from '../../value/Colors';
+import Colors from '../../lip/Colors';
 import Caption from '../../component/Caption';
-import Fonts from '../../value/Fonts';
-import { FontSize } from '../../value/Fonts';
+import Fonts from '../../lip/Fonts';
+import { FontSize } from '../../lip/Fonts';
 import Helper from '../../lip/Helper';
 import Config from '../../lip/Config';
 import NetInfo from '@react-native-community/netinfo';
@@ -27,8 +27,8 @@ import AlertMsg from '../../lip/AlertMsg';
 import ApiUrl from '../../lip/ApiUrl';
 import AppContext from '../../lip/AppContext';
 import moment from 'moment';
-import ImageViewer from 'react-native-image-zoom-viewer';
-import ImagePath from '../../value/ImagePath';
+// import ImageViewer from 'react-native-image-zoom-viewer';
+import ImagePath from '../../lip/ImagePath';
 
 const ActivitiesScreen = ({ navigation, route }) => {
     const loaderContext = useContext(AppContext);
@@ -122,11 +122,11 @@ const ActivitiesScreen = ({ navigation, route }) => {
                             }}></Image>
                     </TouchableOpacity>
 
-                    <ImageViewer
+                    {/* <ImageViewer
                         imageUrls={SelectedImageUrl}
                         renderIndicator={() => null}
                         useNativeDriver={true}
-                    />
+                    /> */}
                 </View>
             </Modal>
         );

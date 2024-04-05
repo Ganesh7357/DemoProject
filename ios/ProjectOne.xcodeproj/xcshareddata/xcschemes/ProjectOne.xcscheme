@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-               BuildableName = "ProjectOne.app"
-               BlueprintName = "ProjectOne"
-               ReferencedContainer = "container:ProjectOne.xcodeproj">
+               BuildableName = "SiddhiAnanta.app"
+               BlueprintName = "SiddhiAnanta"
+               ReferencedContainer = "container:SiddhiAnanta.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "00E356ED1AD99517003FC87E"
-               BuildableName = "ProjectOneTests.xctest"
-               BlueprintName = "ProjectOneTests"
-               ReferencedContainer = "container:ProjectOne.xcodeproj">
+               BuildableName = "SiddhiAnantaTests.xctest"
+               BlueprintName = "SiddhiAnantaTests"
+               ReferencedContainer = "container:SiddhiAnanta.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -55,9 +55,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "ProjectOne.app"
-            BlueprintName = "ProjectOne"
-            ReferencedContainer = "container:ProjectOne.xcodeproj">
+            BuildableName = "SiddhiAnanta.app"
+            BlueprintName = "SiddhiAnanta"
+            ReferencedContainer = "container:SiddhiAnanta.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -72,9 +72,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "ProjectOne.app"
-            BlueprintName = "ProjectOne"
-            ReferencedContainer = "container:ProjectOne.xcodeproj">
+            BuildableName = "SiddhiAnanta.app"
+            BlueprintName = "SiddhiAnanta"
+            ReferencedContainer = "container:SiddhiAnanta.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

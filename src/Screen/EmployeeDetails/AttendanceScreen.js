@@ -15,11 +15,11 @@ import {
     widthPercentageToDP as wp,
     heightPercentageToDP as hp,
 } from 'react-native-responsive-screen';
-import Colors from '../../value/Colors';
-import ImagePath from '../../value/ImagePath';
+import Colors from '../../lip/Colors';
+import ImagePath from '../../lip/ImagePath';
 import Caption from '../../component/Caption';
-import Fonts from '../../value/Fonts';
-import { FontSize } from '../../value/Fonts';
+import Fonts from '../../lip/Fonts';
+import { FontSize } from '../../lip/Fonts';
 import Helper from '../../lip/Helper';
 import NetInfo from '@react-native-community/netinfo';
 import AlertMsg from '../../lip/AlertMsg';

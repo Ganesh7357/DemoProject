@@ -40,28 +40,29 @@ const TeamScreen = ({ navigation }) => {
   const [noDataFound, setnoDataFound] = useState(false)
 
 
+  // useEffect(() => {
+  //   const unsubscribe = navigation.addListener('focus', () => {
+  //     getData();
+  //     searchFilterFunction("") 
+  //     // Refetch data when the tab is focused
+  //   });
+
+  //   // Cleanup the subscription when the component is unmounted
+  //   return unsubscribe;
+  // }, [navigation]);
+
+
   useEffect(() => {
-    const unsubscribe = navigation.addListener('focus', () => {
-      getData();
-      searchFilterFunction("") 
-      // Refetch data when the tab is focused
-    });
-
-    // Cleanup the subscription when the component is unmounted
-    return unsubscribe;
-  }, [navigation]);
-
-
-  useEffect(() => {
-    let updatList = DeviceEventEmitter.addListener(
-      'EmployeeListUpdate',
-      response => {
-        getData();
-      },
-    );
-    return () => {
-      updatList.remove();
-    };
+    getData()
+    // let updatList = DeviceEventEmitter.addListener(
+    //   'EmployeeListUpdate',
+    //   response => {
+    //     getData();
+    //   },
+    // );
+    // return () => {
+    //   updatList.remove();
+    // };
   }, []);
 
 

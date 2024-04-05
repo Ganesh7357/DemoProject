@@ -21,7 +21,7 @@ import ImagePath from '../../lip/ImagePath';
 import Caption from '../../component/Caption';
 import Fonts from '../../lip/Fonts';
 import { FontSize } from '../../lip/Fonts';
-import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
+// import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
 import Helper from '../../lip/Helper';
 import NetInfo from '@react-native-community/netinfo';
 import AlertMsg from '../../lip/AlertMsg';
@@ -89,14 +89,14 @@ const DetailScreen = ({ navigation, route }) => {
   };
   return (
     <View style={styles.container}>
-      <KeyboardAwareScrollView
+      {/* <KeyboardAwareScrollView
         keyboardShouldPersistTaps="handled"
         behavior="padding"
         style={{
           marginBottom: hp(5),
         }}
         showsVerticalScrollIndicator={false}
-        enableOnAndroid={true}>
+        enableOnAndroid={true}> */}
         <View style={styles.mainSpace}>
           <Caption text={'Employee Detail'} style={styles.btnHeader} />
 
@@ -260,137 +260,8 @@ const DetailScreen = ({ navigation, route }) => {
             </View>
           </View>
           <View style={styles.dividerLine}></View>
-
-          {/* <TextInput
-              placeholder="Employee ID"
-              placeholderTextColor={Colors.textPlaceHolder}
-              editable={false}
-              value={empData?.Employee_code}
-              style={styles.textInput}></TextInput>
-
-
-          <TextInput
-            placeholder="Name"
-            placeholderTextColor={Colors.textPlaceHolder}
-            value={empData?.name}
-            editable={false}
-            style={styles.textInput}></TextInput> */}
-
-          {/* <TextInput
-            placeholder="Designation"
-            placeholderTextColor={Colors.textPlaceHolder}
-            value={empData?.designationId?.name}
-            editable={false}
-            style={styles.textInput}></TextInput> */}
-
-          {/* <TextInput
-            placeholder="Gender"
-            placeholderTextColor={Colors.textPlaceHolder}
-            value={empData?.gender}
-            editable={false}
-            style={styles.textInput}></TextInput> */}
-
-          {/* <TextInput
-            placeholder="DOB"
-            placeholderTextColor={Colors.textPlaceHolder}
-            value={empData?.dob}
-            editable={false}
-            style={styles.textInput}></TextInput> */}
-
-          {/* <View
-            style={[
-              styles.rowBox,
-              {
-                borderBottomWidth: 1,
-                borderBottomColor: Colors.textPlaceHolder,
-              },
-            ]}>
-            <TextInput
-              placeholder="Primary Number"
-              placeholderTextColor={Colors.textPlaceHolder}
-              value={empData?.mobile?.toString()}
-              editable={false}
-              style={[
-                styles.textInput,
-                {
-                  flex: 1,
-                  borderBottomWidth: 0,
-                  borderBottomColor: Colors.textPlaceHolder,
-                  paddingHorizontal: 10,
-                },
-              ]}></TextInput>
-
-            <View
-              style={{
-                flexDirection: 'row',
-                justifyContent: 'center',
-                alignItems: 'center',
-              }}>
-              <Image
-                source={ImagePath.Ic_whatsapp}
-                style={{
-                  right: 5,
-                  resizeMode: 'contain',
-                }}></Image>
-            </View>
-          </View> */}
-
-          {/* <TextInput
-            placeholder="Email"
-            placeholderTextColor={Colors.textPlaceHolder}
-            value={empData?.email}
-            editable={false}
-            style={styles.textInput}></TextInput> */}
-
-          {/* <TextInput
-            placeholder="Responsibilities"
-            placeholderTextColor={Colors.textPlaceHolder}
-            value={empData?.responsibilities}
-            editable={false}
-            style={styles.textInput}></TextInput> */}
-
-          {/* <TextInput
-            placeholder="Highest Qualification"
-            placeholderTextColor={Colors.textPlaceHolder}
-            value={empData?.highest_qualification}
-            style={styles.textInput}></TextInput> */}
-
-          {/* <TextInput
-            placeholder="Comunication skill"
-            editable={false}
-            value={empData?.communicationSkill}
-            placeholderTextColor={Colors.textPlaceHolder}
-            style={styles.textInput}></TextInput> */}
-
-          {/* <TextInput
-            placeholder="Blood Group"
-            editable={false}
-            value={empData?.blood_group}
-            placeholderTextColor={Colors.textPlaceHolder}
-            style={styles.textInput}></TextInput> */}
-
-          {/* <TextInput
-            placeholder="Month Salary"
-            editable={false}
-            value={empData?.current_salary}
-            placeholderTextColor={Colors.textPlaceHolder}
-            style={styles.textInput}></TextInput> */}
-
-          {/* <TextInput
-            placeholder="Local address"
-            editable={false}
-            value={empData?.address}
-            placeholderTextColor={Colors.textPlaceHolder}
-            style={styles.textInput}></TextInput> */}
-
-          {/* <TextInput
-            placeholder="Permanent address"
-            editable={false}
-            value={empData?.permanentAddress}
-            placeholderTextColor={Colors.textPlaceHolder}
-            style={styles.textInput}></TextInput> */}
         </View>
-      </KeyboardAwareScrollView>
+      {/* </KeyboardAwareScrollView> */}
     </View>
   );
 };

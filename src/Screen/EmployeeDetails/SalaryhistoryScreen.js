@@ -16,7 +16,7 @@ import {
   heightPercentageToDP as hp,
 } from 'react-native-responsive-screen';
 import Colors from '../../lip/Colors';
-import ImagePath from '../../value/ImagePath';
+import ImagePath from '../../lip/ImagePath';
 import Caption from '../../component/Caption';
 import Fonts from '../../lip/Fonts';
 import { FontSize } from '../../lip/Fonts';
@@ -27,7 +27,7 @@ import ApiUrl from '../../lip/ApiUrl';
 import AppContext from '../../lip/AppContext';
 import Config from '../../lip/Config';
 // import RNFS from 'react-native-fs';
-import ReactNativeBlobUtil from 'react-native-blob-util';
+// import ReactNativeBlobUtil from 'react-native-blob-util';
 
 
 // create a component
@@ -154,44 +154,44 @@ const SalaryhistoryScreen = ({ navigation, route }) => {
     }
   };
   
-  const btnGenerateSalarySlip = async (yy, mm) => {
-    try {
-      const url =
-      Config.baseurl +
-      ApiUrl.SalarySilpDownload +
-      Helper.EmployeeID +
-      `&year=${yy}&month=${mm}`;
-      const fileName = `salary_slip_${getFileName()}.pdf`;
-      const filePath = `${RNFS.DownloadDirectoryPath}/${fileName}`;
+  // const btnGenerateSalarySlip = async (yy, mm) => {
+  //   try {
+  //     const url =
+  //     Config.baseurl +
+  //     ApiUrl.SalarySilpDownload +
+  //     Helper.EmployeeID +
+  //     `&year=${yy}&month=${mm}`;
+  //     const fileName = `salary_slip_${getFileName()}.pdf`;
+  //     const filePath = `${RNFS.DownloadDirectoryPath}/${fileName}`;
       
-      loaderContext.showLoader();
+  //     loaderContext.showLoader();
       
-      // Make sure the directory exists before attempting to create it
-      await RNFS.mkdir(RNFS.DownloadDirectoryPath);
+  //     // Make sure the directory exists before attempting to create it
+  //     await RNFS.mkdir(RNFS.DownloadDirectoryPath);
       
-      const response = await ReactNativeBlobUtil
-        .config({ 
-          path: filePath ,
-          addAndroidDownloads:{
-              notification: true,
-              title: fileName,
-              description: 'File downloaded by download manager.',
-              }
-        })
-        .fetch('GET', url);
-      if (response.respInfo.status === 200) {
-        Helper.showToast("File downloaded!");
-        loaderContext.hideLoader();
-      } else {
-        loaderContext.hideLoader();
-        throw new Error(`Failed to download file: ${response.respInfo.status}`);
-      }
-      loaderContext.hideLoader();
-    } catch (error) {
-      console.log(error);
-      // Handle error appropriately
-    }
-  }
+  //     const response = await ReactNativeBlobUtil
+  //       .config({ 
+  //         path: filePath ,
+  //         addAndroidDownloads:{
+  //             notification: true,
+  //             title: fileName,
+  //             description: 'File downloaded by download manager.',
+  //             }
+  //       })
+  //       .fetch('GET', url);
+  //     if (response.respInfo.status === 200) {
+  //       Helper.showToast("File downloaded!");
+  //       loaderContext.hideLoader();
+  //     } else {
+  //       loaderContext.hideLoader();
+  //       throw new Error(`Failed to download file: ${response.respInfo.status}`);
+  //     }
+  //     loaderContext.hideLoader();
+  //   } catch (error) {
+  //     console.log(error);
+  //     // Handle error appropriately
+  //   }
+  // }
   return (
     <View style={styles.container}>
       <View style={styles.mainSpace}>

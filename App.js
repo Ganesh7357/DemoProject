@@ -9,9 +9,8 @@ import {
   PermissionsAndroid,
 } from 'react-native';
 import 'react-native-gesture-handler';
-// import { NavigationContainer } from '@react-navigation/native';
-// import PunchinScreen from './src/Screen/BottomScreen/PunchinScreen';
 import Routes from './src/Navigation/Routes';
+import Colors from './src/lip/Colors';
 LogBox.ignoreAllLogs(true);
 
 const App = () => {
@@ -34,7 +33,7 @@ const App = () => {
 
   return (
     <SafeAreaView style={{flex:1}}>
-      <StatusBar barStyle="light-content" backgroundColor={'#333'} />
+      <StatusBar barStyle="light-content" backgroundColor={Colors.ThemeColor} />
       <Routes />
     </SafeAreaView> 
   );
