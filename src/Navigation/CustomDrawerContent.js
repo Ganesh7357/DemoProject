@@ -198,6 +198,17 @@ const CustomDrawerContent = ({ navigation }) => {
             menuIconTextView={styles.menuIconTextView}
             img={ImagePath.Ic_attendance}
           />
+          <SideDrawerTab
+            onClick={() => {
+              navigation.closeDrawer();
+              navigation.navigate('BuyingManagerScreen')
+            }}
+            label={'Buying Manager'}
+            menuSamIconCss={styles.menuSamIconCss}
+            sameTextCSs={styles.sameTextCSs}
+            menuIconTextView={styles.menuIconTextView}
+            img={ImagePath.Ic_attendance}
+          />
            <SideDrawerTab
             onClick={() => {
               navigation.closeDrawer();

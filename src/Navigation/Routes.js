@@ -21,6 +21,12 @@ import Colors from '../lip/Colors';
 import AddEmployeeScreen from '../Screen/EmployeeDetails/AddEmployeeScreen';
 import EmployeeDetailsScreen from '../Screen/EmployeeDetails/EmployeeDetailsScreen';
 import EditEmployeeScreen from '../Screen/EmployeeDetails/EditEmployeeScreen';
+// Buying Manager Screen
+import BuyingManagerScreen from '../Screen/BuyingManager/BuyingManagerScreen';
+import AddPropertyScreen from '../Screen/BuyingManager/AddPropertyScreen';
+import InfoPropertyScreen from '../Screen/BuyingManager/InfoPropertyScreen';
+import PrpertyDetailsScreen from '../Screen/BuyingManager/PropertyDetailsScreen';
+import PaymentDetailsScreen from '../Screen/BuyingManager/PaymentDetailesScreen';
 const Stack = createNativeStackNavigator();
 const Drawer = createDrawerNavigator();
 
@@ -83,6 +89,26 @@ function Routes() {
                         cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS,
                     }} />
                 <Stack.Screen name="EditEmployeeScreen" component={EditEmployeeScreen}
+                    options={{
+                        cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS,
+                    }} />
+                <Stack.Screen name="InfoPropertyScreen" component={InfoPropertyScreen}
+                    options={{
+                        cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS,
+                    }} />
+                <Stack.Screen name="AddPropertyScreen" component={AddPropertyScreen}
+                    options={{
+                        cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS,
+                    }} />
+                <Stack.Screen name="BuyingManagerScreen" component={BuyingManagerScreen}
+                    options={{
+                        cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS,
+                    }} />
+                <Stack.Screen name="PrpertyDetailsScreen" component={PrpertyDetailsScreen}
+                    options={{
+                        cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS,
+                    }} />
+                <Stack.Screen name="PaymentDetailsScreen" component={PaymentDetailsScreen}
                     options={{
                         cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS,
                     }} />

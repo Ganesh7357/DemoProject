@@ -21,7 +21,7 @@ import ImagePath from '../../lip/ImagePath';
 import Caption from '../../component/Caption';
 import Fonts from '../../lip/Fonts';
 import { FontSize } from '../../lip/Fonts';
-// import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
+import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
 import Helper from '../../lip/Helper';
 import NetInfo from '@react-native-community/netinfo';
 import AlertMsg from '../../lip/AlertMsg';
@@ -89,14 +89,14 @@ const DetailScreen = ({ navigation, route }) => {
   };
   return (
     <View style={styles.container}>
-      {/* <KeyboardAwareScrollView
+      <KeyboardAwareScrollView
         keyboardShouldPersistTaps="handled"
         behavior="padding"
         style={{
           marginBottom: hp(5),
         }}
         showsVerticalScrollIndicator={false}
-        enableOnAndroid={true}> */}
+        enableOnAndroid={true}> 
         <View style={styles.mainSpace}>
           <Caption text={'Employee Detail'} style={styles.btnHeader} />
 
@@ -261,7 +261,7 @@ const DetailScreen = ({ navigation, route }) => {
           </View>
           <View style={styles.dividerLine}></View>
         </View>
-      {/* </KeyboardAwareScrollView> */}
+      </KeyboardAwareScrollView>
     </View>
   );
 };

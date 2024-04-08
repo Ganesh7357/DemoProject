@@ -19,7 +19,7 @@ import AppHeader from '../../component/AppHeader';
 import Colors from '../../lip/Colors';
 import ImagePath from '../../lip/ImagePath';
 
-// import EmployeeTopTabScreen from './EmployeeTopTabScreen';
+import EmployeeTopTabScreen from './EmployeeTopTabScreen';
 
 const EmployeeDetailsScreen = ({navigation, route}) => {
 
@@ -36,7 +36,7 @@ const EmployeeDetailsScreen = ({navigation, route}) => {
           navigation.navigate('NotificationScreen');
         }}
       />
-       {/* <EmployeeTopTabScreen  navigation={navigation}/> */}
+       <EmployeeTopTabScreen  navigation={navigation}/>
     </View>
   );
 };
